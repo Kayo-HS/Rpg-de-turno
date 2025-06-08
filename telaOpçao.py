@@ -22,12 +22,12 @@ def drawMenu():
     texto = font.render("Menu", True, azul)
     tela.blit(texto,(350, 50))
 
-    botaoStart = pygame.Rect(300,200,200,50)
+    botaoStart = pygame.Rect(300,200,300,70)
     pygame.draw.rect(tela, azul, botaoStart)
     texto = fontePadrao.render("Iniciar jogo", True, preto)
     tela.blit(texto, (botaoStart.x + 20, botaoStart.y + 10))
 
-    botaoSair = pygame.Rect(300,300,200,50)
+    botaoSair = pygame.Rect(300,300,300,70)
     pygame.draw.rect(tela, azul, botaoSair)
     texto = fontePadrao.render("Sair", True, preto)
     tela.blit(texto,(botaoSair.x + 80, botaoSair.y + 10))
@@ -38,6 +38,21 @@ def selecaoDeClasse():
     tela.fill(preto)
     texto = fontePadrao.render("Esolha sua classe", True, azul)
     tela.blit(texto,(200,50))
+
+    classeBerserk = pygame.Rect(300,200,250,70)
+    pygame.draw.rect(tela, azul, classeBerserk)
+    texto = fontePadrao.render("Berserk", True, preto)
+    tela.blit(texto, (classeBerserk.x + 20, classeBerserk.y + 10))
+
+    classeEspadachim = pygame.Rect(300, 300, 350, 70)
+    pygame.draw.rect(tela, azul, classeEspadachim)
+    texto = fontePadrao.render("Espadachim", True, preto)
+    tela.blit(texto, (classeEspadachim.x + 20, classeEspadachim.y +10))
+
+    classePaladino = pygame.Rect(300, 400, 250, 70)
+    pygame.draw.rect(tela,azul, classePaladino)
+    texto = fontePadrao.render("Paladino", True, preto)
+    tela.blit(texto, (classePaladino.x + 20, classePaladino.y + 10))
 
 
 while True:
