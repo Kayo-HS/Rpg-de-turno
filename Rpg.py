@@ -46,7 +46,9 @@ if 0<= escolhaClasse <= 2:
     computador = randint(0,2)
     classesNomes = list(classes.keys())
     classesComputador = classesNomes[computador]
-    escolhaComputador = classes[classesComputador]       
+    escolhaComputador = classes[classesComputador]    
+
+     
     
 
 
@@ -55,10 +57,27 @@ if 0<= escolhaClasse <= 2:
     print(f"O computador escolheu {classesComputador}")
     print("-=-"*10)
 
+    # print(escolhaClasse["HP"])
+    # print(escolhaComputador["HP"])
+    if escolhaClasse["HP"] < 0 and escolhaComputador["HP"] < 0:
+        while True:
+            jogaprimeiro = randint(0,1)
+
+            if jogaprimeiro == 0:
+                print("Jogador vai primeiro")
+                acaoJogador = int(input("Escolha com sabedoria:"))
+                print
+                ("[0] Ataque" 
+                 "[1] Defesa"
+                 "[2] Esquiva")
+                if acaoJogador == 0:
+                    acaoDano = randint(0,escolhaClasse["Ataque"])
+                    danoDado = escolhaComputador["HP"] - acaoDano
+                    print (danoDado)
+
+    elif escolhaClasse["HP"] == 0:
+        print("Jogador perdeu")
+    elif escolhaComputador["HP"] == 0:
+        print("Oponente perdeu")
 else:
-    print("Ação invalida")
-
-
-
-
-
+    print("Ação invalida.")
